@@ -1,6 +1,7 @@
 import { Image } from 'expo-image';
 import { Platform, StyleSheet } from 'react-native';
 
+import { ScreenContainer } from '@/components/container';
 import { HelloWave } from '@/components/hello-wave';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import { ThemedText } from '@/components/themed-text';
@@ -17,6 +18,7 @@ export default function HomeScreen() {
           style={styles.reactLogo}
         />
       }>
+        <ScreenContainer tabbed scroll >
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome index burası YOLUN ACİK!</ThemedText>
         <HelloWave />
@@ -74,6 +76,7 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
       </ThemedView>
+      </ScreenContainer>
     </ParallaxScrollView>
   );
 }
